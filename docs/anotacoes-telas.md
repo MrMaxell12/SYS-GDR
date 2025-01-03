@@ -1,12 +1,12 @@
 # Telas Comuns
 
-- Login 
+- *Login
 
 # Telas Players
 
 Prioridade Maior:
-- Principal
-- Status
+- *Principal
+- *Status
 - Inventário / Documentos Chave
 - Notificações com o Mestre
 - Chat 
@@ -19,10 +19,13 @@ Prioridade Menor:
 
 # Telas Narrador
 
-- Principal
+- *Principal
 - Gerenciar Login
 - Gerenciar Fichas
 - Gerenciar Inventários
 - Gerenciar Buffs/Debuffs
 - Gerenciar Acervo
 - Chat ( Narrador Edition )
+
+### Legenda
+*pode ser feito agora
