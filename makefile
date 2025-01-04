@@ -9,7 +9,7 @@ VENV_PIP=.venv/bin/pip
 setup:
 	python -m venv .venv
 	./$(VENV_PIP) install -r requirements.txt
-	./$(VENV_PIP) install .
+	# ./$(VENV_PIP) install .
 
 
 # Executa o projeto
