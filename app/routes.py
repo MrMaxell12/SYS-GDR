@@ -11,9 +11,14 @@ def index_route():
     return render_template('index.html')
 
 # Página de Login
-@app.route('/login')
+@app.route('/login', methods=['GET'])
 def login_route():
     return render_template('login.html')
+
+# Verificação de Login
+@app.route('/login', methods=['POST'])
+def login_verify():
+    return 
 
 # Página Principal do Usuário
 @app.route('/main')
