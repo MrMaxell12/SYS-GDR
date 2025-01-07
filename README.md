@@ -15,7 +15,7 @@ Isso pode ser feito automaticamente, pelo `make` ou manualmente.
 
 1. Executar
 ```
-$ make setup
+make setup
 ```
 
 Caso não funcione, vá para o processo manual.
@@ -24,7 +24,7 @@ Caso não funcione, vá para o processo manual.
 
 1. Criar o ambiente virtual python (venv):
 ```
-$ python -m venv .venv
+python -m venv .venv
 ```
 Obs.: Certifique-se de estar na raíz do projeto.
 
@@ -32,27 +32,27 @@ Obs.: Certifique-se de estar na raíz do projeto.
 
 No linux:
 ```
-$ source .venv/bin/activate
+source .venv/bin/activate
 ```
 
 No windows:
 ```
-$ .venv\Scripts\activate
+.venv\Scripts\activate
 ```
 
 Para desativar:
 ```
-(.venv) $ deactivate
+deactivate
 ```
 
 3. Baixar as dependências via pip:
 ```
-(.venv) $ pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 4. (Futuramente) Instalar o pacote da aplicação flask
 ```
-(.venv) $ pip install .
+pip install .
 ```
 
 
