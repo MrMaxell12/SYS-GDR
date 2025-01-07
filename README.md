@@ -26,7 +26,7 @@ Caso não funcione, vá para o processo manual.
 ```
 $ python -m venv .venv
 ```
-Obs.: Certifique-se de estar na raíz do projeto.
+Obs.: Certifique-se de estar na raiz do projeto.
 
 2. Ative a venv.
 
