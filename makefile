@@ -2,14 +2,23 @@ APP_NAME=
 PORT=5000
 
 
-VENV_PYTHON=.venv/bin/python
-VENV_PIP=.venv/bin/pip
+# Detecta o sistema operacional
+ifeq ($(OS),Windows_NT)
+    VENV_PYTHON=.venv\Scripts\python.exe
+    VENV_PIP=.venv\Scripts\pip.exe
+else
+    UNAME_S := $(shell uname -s)
+    ifeq ($(UNAME_S),Linux)
+        VENV_PYTHON=.venv/bin/python
+        VENV_PIP=.venv/bin/pip
+    endif
+endif
 
 # Cria a venv e instala as dependências
 setup:
-	python -m venv .venv
-	./$(VENV_PIP) install -r requirements.txt
-	# ./$(VENV_PIP) install .
+	python -m venv .venv # Cria a venv
+	./$(VENV_PIP) install -r requirements.txt	# Instala as dependências na venv
+	# ./$(VENV_PIP) install .		# Instala o pacote
 
 
 # Executa o projeto
