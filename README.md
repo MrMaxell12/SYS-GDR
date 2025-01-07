@@ -1,6 +1,6 @@
 # SYS-GDR
 
-## About
+## Sobre
 SISTEMA RPG PARA O GDR
 
 ## Tutoriais
