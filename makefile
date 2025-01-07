@@ -16,9 +16,8 @@ endif
 
 # Cria a venv e instala as dependências
 setup:
-	python -m venv .venv # Cria a venv
-	./$(VENV_PIP) install -r requirements.txt	# Instala as dependências na venv
-	# ./$(VENV_PIP) install .		# Instala o pacote
+	python -m venv .venv
+	./$(VENV_PIP) install -r requirements.txt
 
 
 # Executa o projeto
