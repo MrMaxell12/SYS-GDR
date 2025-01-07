@@ -55,6 +55,22 @@ pip install -r requirements.txt
 pip install .
 ```
 
+### Executando o Projeto
+
+Quando estamos em desenvolvimento, podemos executar uma versão local do projeto.
+
+Para executar o projeto, há dois métodos, via `make` e o **processo manual** . Na raiz do projeto faça:
+
+#### Via make
+```
+make run
+```
+
+#### Manualmente
+```
+flask run --debug
+```
+
 
 ### Instalando novas dependências pip
 
