@@ -1,15 +1,15 @@
 # SYS-GDR
 
-## About
+## Sobre
 SISTEMA RPG PARA O GDR
 
 ## Tutoriais
 
 ### Configurando o ambiente local
 
-Após clonar o projeto localmente, é necessário configurar o seu ambiente local com as dependências necessárias para executar o projeto. É necessário criar um ambiente virtual python (venv), instalar os pacotes python via pip, ativar a venv, e (futuramente) instalar o projeto como um pacote python.
+Após clonar o projeto localmente, é necessário configurar o seu ambiente local com as dependências necessárias para executar o projeto. Com mais detalhes, é preciso criar um ambiente virtual python (venv), instalar os pacotes python via pip, ativar a venv, e (futuramente) instalar o projeto como um pacote python.
 
-Isso pode ser feito automaticamente, pelo `make` ou manualmente.
+Isso pode ser feito automaticamente pelo `make`, ou manualmente.
 
 #### Processo via make
 
@@ -26,7 +26,7 @@ Caso não funcione, vá para o processo manual.
 ```
 python -m venv .venv
 ```
-Obs.: Certifique-se de estar na raíz do projeto.
+Obs.: Certifique-se de estar na raiz do projeto.
 
 2. Ative a venv.
 
