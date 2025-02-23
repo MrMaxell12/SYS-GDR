@@ -1,5 +1,5 @@
 from . import main
-from flask import render_template
+from flask import jsonify, render_template, request
 
 
 """ WEB PAGE 
@@ -18,7 +18,16 @@ def login_route():
 # Verificação de Login
 @main.route('/login', methods=['POST'])
 def login_verify():
-    return 'hello'
+    usuario = request.form.get("usuario")
+    senha = request.form.get("senha")
+
+    # TODO: Usar hash da senha ao invés da senha completa.
+
+    # Validar senha
+    
+
+
+    return jsonify({'usuario': usuario, 'senha': senha})
 
 # Página Principal do Usuário
 @main.route('/main')
