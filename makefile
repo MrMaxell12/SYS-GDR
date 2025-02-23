@@ -22,9 +22,12 @@ setup:
 
 # Executa o projeto
 run:
-	flask run --debug
-	# ./.venv/bin/waitress-serve --host 127.0.0.1 --port $(PORT) $(APP_NAME):app
+	./.venv/bin/waitress-serve --host 127.0.0.1 --port $(PORT) $(APP_NAME):app
+	
 
+# Modo desenvolvedor
+dev: 
+	flask run --debug
 
 # Apaga a venv
 clear_venv:
