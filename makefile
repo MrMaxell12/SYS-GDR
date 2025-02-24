@@ -27,7 +27,7 @@ run:
 
 # Modo desenvolvedor
 dev: 
-	flask run --debug
+	python main.py --debug
 
 # Apaga a venv
 clear_venv:
