@@ -1,7 +1,9 @@
 import os
 
+basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config:
+    SECRET_KEY = 'trestigrestristescomeramtrigo'
 
     def init_app(self, app):
         pass
@@ -12,11 +14,10 @@ class ProductionConfig(Config):
 
 
 class DevelopmentConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///data/development_data.sqlite'
-
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'data', 'development_data.sqlite')
 
 class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///data/test_data.sqlite'
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'data', 'test_data.sqlite')
 
 
 config = {

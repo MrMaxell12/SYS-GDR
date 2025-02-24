@@ -3,7 +3,7 @@ from flask import Flask
 # from flask_moment import Moment
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase
-from .config import config
+from config import config
 
 # mail = Mail()
 # moment = Moment()

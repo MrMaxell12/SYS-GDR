@@ -4,17 +4,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Guardiões das Relíquias</title>
-        <link href="static/style.css" rel="stylesheet">
+        <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
     </head>
     <body>
     
-        <a href="/status">Status</a> | <a href="/inventory">Inventário</a>
-
-        <h1>Página Principal</h1>
-
-        <h2>Zeref</h2>
-
-        Descrição do zeref
+        <div class="wrapper">
+          <h1>Página Principal</h1><br>
+          <h2>Bem vindo {{ username }}</h2><br>
+          <!--<a href="/status">Status</a> | <a href="/inventory">Inventário</a>-->
+        </div>
 
     </body>
 </html>
