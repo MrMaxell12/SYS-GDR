@@ -1,7 +1,9 @@
 from app.models.contas import Usuario
 from . import main
 from .. import db
-from flask import jsonify, render_template, request, url_for, redirect, session
+from flask import current_app, jsonify, render_template, request, url_for, redirect, session
+from werkzeug.security import generate_password_hash, check_password_hash
+
 
 
 """ WEB PAGE 
@@ -24,16 +26,14 @@ def login_route():
 def login_verify():
     # Recebe os dados de entrada do formulário
     username = request.form.get("username")
-    senha = request.form.get("senha")
-
-    # TODO: Usar hash da senha ao invés da senha em string.
+    senha = str(request.form.get("senha"))
 
     # Validar login
     # Procura usuário com nome enviado
     usuario = db.session.execute(db.select(Usuario).filter_by(username=username)).scalar_one()
 
     # Verificar se a senha bate
-    if senha == usuario.senha:
+    if check_password_hash(usuario.senha, senha):
         # Salva o usuário na sessão local e redireciona para a página principal
         session['username'] = username
         return redirect(url_for('main.main_route'))
@@ -49,7 +49,9 @@ def cadastro_route():
         # Recebe os dados de entrada do formulário
         username = request.form.get("username")
         email = request.form.get("email")
-        senha = request.form.get("senha")
+        senha = str(request.form.get("senha"))
+
+        hashed_senha = generate_password_hash(senha)
 
         # Verificar se entradas estão presentes.
         if not all([ username, email, senha ]):
@@ -57,7 +59,7 @@ def cadastro_route():
             return render_template('cadastro.html')
 
         # Adiciona um novo usuário
-        usuario = Usuario(username=username, email=email, senha=senha)
+        usuario = Usuario(username=username, email=email, senha=hashed_senha)
         db.session.add(usuario)
         db.session.commit()
         return redirect(url_for('main.login_route'))
