@@ -22,7 +22,7 @@ def create_app(config_name='default'):
     # attach routes and custom error pages here
 
     # Define os modelos de contas do banco de dados
-    from .models import contas
+    from . import models
 
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)

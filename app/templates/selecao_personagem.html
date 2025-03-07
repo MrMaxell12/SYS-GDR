@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Cadastro</title>
+        <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+    </head>
+    <body>
+        
+        <div class="wrapper">
+            <h1>Personagens</h1>
+            {% for personagem in personagens %}
+                
+            <!--TODO: Fazer o botão de escolher personagem realmente funcionar-->
+            <button type="" class="btn" onclick="">{{ personagem.nome }}</button>
+                    
+            {% endfor %}
+        </div>
+    
+    </body>
+</html>
+
