@@ -4,12 +4,16 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Guardiões das Relíquias</title>
-        <link rel="stylesheet" href="static/styles.css" />
+        <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
     </head>
 
     <body>
-        <h1>Guardiões das Reliquias</h1>
 
-        <a href="/login">Login</a>
+      <div class="wrapper">
+          <h1>Guardiões das Reliquias</h1><br>
+          <button class="btn" onclick="window.location.href='/login'">Login</button>
+          <button class="btn" onclick="window.location.href='/cadastro'">Cadastrar</button>
+      </div>
+
     </body>
 </html>
